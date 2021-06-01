@@ -1,38 +1,44 @@
 package br.com.model;
 
 import javax.persistence.Column;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
- * @author Carlo
+ * @author Carlos Daniel
  */
+
+@Entity
+@Table(name = "votos")
 public class VotoModel {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto Incremento
+    private int voto_id;
     
-    @ManyToOne
-    @JoinColumn(name = "PK_IMAGEM")
-    private PaisModel paisModel;
-    
-    @Column(name = "qnt_votos")
-    private int qnt_votos;
+    @Column(name = "pais")
+    private int pais;
 
-    public PaisModel getPaisModel() {
-        return paisModel;
+    public int getVoto_id() {
+        return voto_id;
     }
 
-    public void setPaisModel(PaisModel paisModel) {
-        this.paisModel = paisModel;
+    public VotoModel(int pais) {
+        this.pais = pais;
+    }
+    
+    public void setVoto_id(int voto_id) {
+        this.voto_id = voto_id;
     }
 
-    public int getQnt_votos() {
-        return qnt_votos;
+    public int getPais() {
+        return pais;
     }
 
-    public void setQnt_votos(int qnt_votos) {
-        this.qnt_votos = qnt_votos;
-    }
-    
-    
-    
+    public void setPais(int pais) {
+        this.pais = pais;
+    }    
 }

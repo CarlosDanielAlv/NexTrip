@@ -1,7 +1,13 @@
+<%-- 
+    Document   : teste
+    Created on : 31 de mai de 2021, 17:59:05
+    Author     : Carlos
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="br">
     <head>
-        <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
@@ -31,7 +37,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Pagina Inicial</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="VotoController?action=votolist">Votação</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="votacao.html">Votação</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="paises.html">Países</a></li>
 
                     </ul>
@@ -148,3 +154,4 @@
                 <script src="js/scripts.js"></script>
                 </body>
                 </html>
+
