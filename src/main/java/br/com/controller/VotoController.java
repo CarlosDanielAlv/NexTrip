@@ -52,7 +52,6 @@ public class VotoController extends HttpServlet {
                 System.out.println("Quantiade de votos 4: " + voto4);
                 System.out.println("Quantiade de votos 5: " + voto5);
             } catch (Exception e) {
-                
                 System.out.println("Erro ao Imprimir todos os Dados: " + e.getMessage());
             }
         }
@@ -69,7 +68,6 @@ public class VotoController extends HttpServlet {
                 System.out.println("Erro ao Votar no pais 1: " + e.getMessage());
             }
         }
-        
         // VOTAR NO PAIS 2 
         else if (action.equalsIgnoreCase("voto2")){
             forward = "";
@@ -79,7 +77,6 @@ public class VotoController extends HttpServlet {
                 System.out.println("Erro ao Votar no pais 2");
             }
         }
-        //INSERIR VOTOS NO BANCO DE DADOS
         
         RequestDispatcher view = request.getRequestDispatcher(forward);
         view.forward(request, response);
