@@ -57,11 +57,10 @@ public class VotoController extends HttpServlet {
         }
         // VOTAR NO PAIS 1 
         if (action.equalsIgnoreCase("voto1")){
-            forward = LIST;
+            forward = VOTE;
             try {
                 VotoModel vm = new VotoModel(1);
-                VotoDAO vdao = new VotoDAO();
-                vdao.save(vm);
+                votoBO.save(vm);
                 System.out.println("Voto 1 inserido com sucesso....");
                 //votoBO.save(vm);
             } catch (Exception e) {
@@ -70,11 +69,50 @@ public class VotoController extends HttpServlet {
         }
         // VOTAR NO PAIS 2 
         else if (action.equalsIgnoreCase("voto2")){
-            forward = "";
+           forward = VOTE;
             try {
-                votoBO.save(new VotoModel(2));
+                VotoModel vm = new VotoModel(2);
+                votoBO.save(vm);
+                System.out.println("Voto 1 inserido com sucesso....");
+                //votoBO.save(vm);
             } catch (Exception e) {
-                System.out.println("Erro ao Votar no pais 2");
+                System.out.println("Erro ao Votar no pais 1: " + e.getMessage());
+            }
+        }
+        // VOTAR NO PAIS 3
+        else if (action.equalsIgnoreCase("voto3")){
+           forward = VOTE;
+            try {
+                VotoModel vm = new VotoModel(3);
+                votoBO.save(vm);
+                System.out.println("Voto 1 inserido com sucesso....");
+                //votoBO.save(vm);
+            } catch (Exception e) {
+                System.out.println("Erro ao Votar no pais 1: " + e.getMessage());
+            }
+        }
+        // VOTAR NO PAIS 4 
+        else if (action.equalsIgnoreCase("voto4")){
+           forward = VOTE;
+            try {
+                VotoModel vm = new VotoModel(4);
+                votoBO.save(vm);
+                System.out.println("Voto 1 inserido com sucesso....");
+                //votoBO.save(vm);
+            } catch (Exception e) {
+                System.out.println("Erro ao Votar no pais 1: " + e.getMessage());
+            }
+        }
+        // VOTAR NO PAIS 5
+        else if (action.equalsIgnoreCase("voto5")){
+           forward = VOTE;
+            try {
+                VotoModel vm = new VotoModel(5);
+                votoBO.save(vm);
+                System.out.println("Voto 1 inserido com sucesso....");
+                //votoBO.save(vm);
+            } catch (Exception e) {
+                System.out.println("Erro ao Votar no pais 1: " + e.getMessage());
             }
         }
         
