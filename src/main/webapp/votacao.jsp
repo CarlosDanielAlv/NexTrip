@@ -1,5 +1,12 @@
+<%-- 
+    Document   : votacao
+    Created on : 9 de jun de 2021, 14:28:43
+    Author     : Carlos
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -13,6 +20,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
@@ -30,7 +38,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Página Inicial</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="VotoController?action=votolist">Votação</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="votacao.html">Votação</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="paises.html">Países</a></li>
                     </ul>
                 </div>
@@ -47,7 +55,12 @@
                                     <span class="section-heading-upper">Ranking</span>
                                     <span class="section-heading-lower">Países mais votados como destinos para viagem após pandemia</span>
                                 </h2>
-                     <p class="mb-0"> *Gráfico*
+                                <p class="mb-0"> *Gráfico*
+                                    <p>TUNÍSIA ${pais1}</p>
+                                    <p>CUBA ${pais2}</p>
+                                    <p>TURQUIA ${pais3}</p>
+                                    <p>EGITO ${pais4}</p>
+                                    <p>ALBÂNIA ${pais5}</p>
                                 </p>
                             </div>
                         </div>

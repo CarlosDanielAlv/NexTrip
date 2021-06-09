@@ -6,8 +6,6 @@
 package br.com.controller;
 
 import br.com.BO.VotoBO;
-import br.com.pesistence.VotoDAO;
-import br.com.model.VotoModel;
 import br.com.model.VotoModel;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -19,14 +17,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *
  * @author Carlo
  */
 @WebServlet(name = "VotoController", urlPatterns = {"/VotoController"})
 public class VotoController extends HttpServlet {
 
     private static String VOTE = "/paises.html"; // Variável recebe o caminho para página de votos
-    private static String LIST = "/votacao.html"; // Variável recebe caminho para página que lista os paises
+    private static String LIST = "/votacao.jsp"; // Variável recebe caminho para página que lista os paises
     private ArrayList<VotoModel> listVoto = new ArrayList<>(); // Array para armazenar listas de paises
     private VotoBO votoBO = new VotoBO(); // Classe VotoBO
 
@@ -46,11 +43,11 @@ public class VotoController extends HttpServlet {
                 Long voto3 = votoBO.getVotosPais3();
                 Long voto4 = votoBO.getVotosPais4();
                 Long voto5 = votoBO.getVotosPais5();
-                System.out.println("Quantiade de votos 1: " + voto1);
-                System.out.println("Quantiade de votos 2: " + voto2);
-                System.out.println("Quantiade de votos 3: " + voto3);
-                System.out.println("Quantiade de votos 4: " + voto4);
-                System.out.println("Quantiade de votos 5: " + voto5);
+                request.setAttribute("pais1", voto1);
+                request.setAttribute("pais2", voto2);
+                request.setAttribute("pais3", voto3);
+                request.setAttribute("pais4", voto4);
+                request.setAttribute("pais5", voto5);
             } catch (Exception e) {
                 System.out.println("Erro ao Imprimir todos os Dados: " + e.getMessage());
             }
@@ -73,7 +70,7 @@ public class VotoController extends HttpServlet {
             try {
                 VotoModel vm = new VotoModel(2);
                 votoBO.save(vm);
-                System.out.println("Voto 1 inserido com sucesso....");
+                System.out.println("Voto 2 inserido com sucesso....");
                 //votoBO.save(vm);
             } catch (Exception e) {
                 System.out.println("Erro ao Votar no pais 1: " + e.getMessage());
@@ -85,7 +82,7 @@ public class VotoController extends HttpServlet {
             try {
                 VotoModel vm = new VotoModel(3);
                 votoBO.save(vm);
-                System.out.println("Voto 1 inserido com sucesso....");
+                System.out.println("Voto 3 inserido com sucesso....");
                 //votoBO.save(vm);
             } catch (Exception e) {
                 System.out.println("Erro ao Votar no pais 1: " + e.getMessage());
@@ -97,7 +94,7 @@ public class VotoController extends HttpServlet {
             try {
                 VotoModel vm = new VotoModel(4);
                 votoBO.save(vm);
-                System.out.println("Voto 1 inserido com sucesso....");
+                System.out.println("Voto 4 inserido com sucesso....");
                 //votoBO.save(vm);
             } catch (Exception e) {
                 System.out.println("Erro ao Votar no pais 1: " + e.getMessage());
@@ -109,7 +106,7 @@ public class VotoController extends HttpServlet {
             try {
                 VotoModel vm = new VotoModel(5);
                 votoBO.save(vm);
-                System.out.println("Voto 1 inserido com sucesso....");
+                System.out.println("Voto 5 inserido com sucesso....");
                 //votoBO.save(vm);
             } catch (Exception e) {
                 System.out.println("Erro ao Votar no pais 1: " + e.getMessage());
